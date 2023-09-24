@@ -4,6 +4,8 @@
   become: no
 
   tasks:
-    - name: install htop
-      package:
-        name: htop
+    - block: 
+      - name: install htop
+        package:
+          name: htop
+      become: false
